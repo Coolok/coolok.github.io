@@ -119,8 +119,8 @@
             var jMax = squares[i].length;
             for (var j = 0; j < jMax; ++j) {
                 var sq = squares[i][j];
-                sq.x = sq.xS*(xDelta / (iMax - (i)));
-                sq.y = sq.yS*(yDelta / (iMax - (i)));
+                sq.x = sq.xS+sq.xS*(xDelta / (iMax - (i)));
+                sq.y = sq.yS+sq.yS*(yDelta / (iMax - (i)));
             }
         }
         renderSquares();
