@@ -12,7 +12,7 @@
 
 </head>
 <body>
-<a id="fullscreenButton" class="fadable" href="javascript:onFullscreen(event);">fullscreen2</a>
+<a id="fullscreenButton" class="fadable" href="javascript:onFullscreen(event);">fullscreen3</a>
 <canvas id="surface"/>
 
 <script type="text/javascript">
@@ -120,7 +120,7 @@
             for (var j = 0; j < jMax; ++j) {
                 var sq = squares[i][j];
                 sq.x = sq.xS+(winW/4)*(xDelta / (iMax - (i)));
-                sq.y = sq.yS+(winh/4)*(yDelta / (iMax - (i)));
+                sq.y = sq.yS+(winH/4)*(yDelta / (iMax - (i)));
             }
         }
         renderSquares();
