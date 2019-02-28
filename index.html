@@ -63,6 +63,8 @@
             for (var j = 0; j <= ((NUMBER_OF_LAYERS - 1) - i); ++j) {
                 var size = getRandomWholeNumber(winW/MIN_SQ_SIZE, winW/MAX_SQ_SIZE);
                 var sq = {size:size,
+                    xS:getRandomWholeNumber(0, winW-size),
+                    yS:getRandomWholeNumber(0, winH-size),
                     x:getRandomWholeNumber(0, winW-size),
                     y:getRandomWholeNumber(0, winH-size),
                     color:'rgba('+getRandomWholeNumber(0, 255)+', '+getRandomWholeNumber(0, 255)+', '+getRandomWholeNumber(0, 255)+', '+ alpha +')'};
@@ -117,8 +119,8 @@
             var jMax = squares[i].length;
             for (var j = 0; j < jMax; ++j) {
                 var sq = squares[i][j];
-                sq.x += (xDelta / (iMax - (i)));
-                sq.y += (yDelta / (iMax - (i)));
+                sq.x = sq.xS*(xDelta / (iMax - (i)));
+                sq.y = sq.yS*(yDelta / (iMax - (i)));
             }
         }
         renderSquares();
